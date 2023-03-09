@@ -48,14 +48,17 @@ class AnalizaPessoa:
 analiza_pessoa = AnalizaPessoa()
 while True:
     print("\nSeja Bem-vindo a Portaria FATEC!\nPara liberar acesso informe seu vinculo com a instituição")
-    print("""Vinculo código ---------------------------- 
-     Diretor:         1 
-     Coordenador:     2 
-     Professor:       3 
-     Adiministrativo: 4 
-     Aluno:           5 
-     Vestibulando:    6 
-     Outro:           0 """)
+    print("""
+        Vinculo         código
+    ----------------------------
+        Diretor:           1
+        Coordenador:       2
+        Professor:         3
+        Adiministrativo:   4
+        Aluno:             5 
+        Vestibulando:      6
+        Outro:             0
+    """)
 
     cod = input("Código da opção de vinculo: ")
     if cod not in ("1","2","3","4","5","6"):
@@ -63,5 +66,6 @@ while True:
     else:
         pessoa = analiza_pessoa.criar_acesso(cod)
         print(pessoa.ingressar(input("informe seu nome:")))
-    if input("Deseja reiniciar (S/N)?" ) not in ("S", "s"):
+        
+    if input("Reiniciar (digite S) ou sair (digite Q)" ) not in ("S", "s"):
         break
